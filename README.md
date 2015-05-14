@@ -1,5 +1,5 @@
 # One Month Rails
 
-This is a sample project. I am learning with [*One Month*](http://onemonth.com)
+This is a sample project to learn Rails and Git.
 
 by [Khairul Akmal](http://mofodox.me)

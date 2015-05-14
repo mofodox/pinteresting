@@ -14,14 +14,50 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "About", about_path %></li>
+        <li>
+          <%= link_to root_path do %>
+            <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+              </button>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to about_path do %>
+             <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About
+              </button>
+          <% end %>
+        </li>
         <% if user_signed_in? %>
-          <li><%= link_to 'New Pin', new_pin_path %></li>
-          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li>
+            <%= link_to new_pin_path do %>
+              <button type="button" class="btn btn-primary btn-sm">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Pin
+              </button>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to edit_user_registration_path do %>
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Account Settings
+              </button>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to destroy_user_session_path, method: :delete do %>
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log out
+              </button>
+            <% end %>
+          </li>
         <% else %>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li>
+            <%= link_to new_user_session_path do %>
+              <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Log in
+              </button>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

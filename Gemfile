@@ -29,6 +29,10 @@ gem 'devise'
 gem "paperclip", "~> 4.2"
 # Masonry-rails
 gem 'masonry-rails', '~> 0.2.4'
+# will_paginate
+gem 'will_paginate', '~> 3.0.7'
+# will_paginate_bootstrap
+gem 'will_paginate-bootstrap'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc

@@ -1,5 +1,7 @@
 <%= link_to pins_path do %>
-	<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+	<button type="button" class="btn btn-default">
+		<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Back
+	</button>
 <% end %>
 
 <div class="row">
@@ -10,7 +12,7 @@
 			</div>
 			<div class="panel-body">
 				<p><%= @pin.description %></p>
-				<p><strong><%= @pin.user.email if @pin.user %></strong></p>
+				<p><span class="glyphicon glyphicon-user"></span> <strong><%= @pin.user.name if @pin.user %></strong></p>
 
 				<% if @pin.user == current_user %>
 					<%= link_to edit_pin_path(@pin) do %>
